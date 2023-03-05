@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    {% block head %}{% endblock %}
+</head>
+    <style>
+        #map {
+ height: 360px;
+ width: 300px;
+ overflow: hidden;
+ float: left;
+ border: thin solid #333;
+ }
+#capture {
+ height: 360px;
+ width: 480px;
+ overflow: hidden;
+ float: left;
+ background-color: #ECECFB;
+ border: thin solid #333;
+ border-left: none;
+ }
+    </style>
+
+<body>
+
+    <div class="container">
+        <div class="nav">
+            <div class = "logo-content" >
+                <img class="logo_img" src="/static/img/baby-yoda.png">
+               <a href = "http://127.0.0.1:5000/" class = "logo-name">
+                    <span>
+                      Jedi
+                    </span>
+                </a>
+            </div>
+
+            <div class="nav-links">
+                <a href="http://127.0.0.1:5000">home</a>
+                <a href="/templates/questions.html">questions</a>
+                <a href="/templates/maps.html">maps</a>
+            </div>
+        </div>
+
+        <div class="maps-container">
+            <div class="maps-element">
+                <div class="map-heading">
+                    <h2>Wineries</h2>
+                    <br>
+                </div>
+
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1GFUZjLb7z74CaHw0ShwQOXxHx7KnKiw&ehbc=2E312F" width="640" height="480"></iframe>
+                </div>
+            </div>
+
+            <div class="maps-element">
+                <div class="map-heading">
+                    <br>
+                    <br>
+                    <h2>Monasteries</h2>
+                    <br>
+                </div>
+
+                <div class="map-frame">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1bPHMk9AZQQt1FawNgRN1Bitri3ocQ7E&ehbc=2E312F" width="640" height="480"></iframe>
+            </div>
+        </div>
+
+        <div class="maps-element">
+            <div class="map-heading">
+                <br>
+                <br>
+                <h2>Fortresses and Castles</h2>
+                <br>
+            </div>
+
+            <div class="map-frame">
+
+            </div>
+    </div>
+    </div>
+
+    
+
+    {% block body %}{% endblock %}
+
+</body>
+</html>
